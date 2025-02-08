@@ -1,0 +1,237 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background-image {
+    background-image: url('https://i.etsystatic.com/41465127/r/il/18480b/4659795616/il_fullxfull.4659795616_9asy.jpg');
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cards-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card p {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+
+#card1, #card2, #card3, #card4, #card5, #popup-card {
+    background-size: cover;
+    background-position: center;
+    background-color: #FFF2F8;
+}
+
+
+/* Adjustments to individual card sizes */
+
+#card1 {
+    width: 220px; height: 170px;
+    transform: rotate(5deg);
+    margin-left: -90px; margin-top: -60px;
+    /* background-image: url('https://imgs.search.brave.com/FxqX8c8EGSemSBlLntuqAsVAJIX4T_kHiCNzJcZlJA8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9waXhlbC1wbGF5/Z3JvdW5kLWNyYWZ0/ZWQtYXNzZXRzLXlv/dXItZ2FtZS13b3Js/ZF85MzE4NjYtMTI2/NjYxLmpwZz9zaXpl/PTYyNiZleHQ9anBn'); */
+}
+
+#card2 {
+    width: 200px; height: 150px;
+    transform: rotate(-3deg);
+}
+
+#card3 {
+    width: 240px; height: 190px;
+    transform: rotate(-2deg);
+    margin-left: -105px; margin-top: -70px;
+}
+
+#card4 {
+    width: 260px; height: 210px;
+    transform: rotate(4deg);
+    margin-left: -120px; margin-top: -80px;
+    
+}
+
+#card5 {
+    width: 280px; height: 230px;
+    transform: rotate(-4deg);
+    margin-left: -135px; margin-top: -90px;
+    
+}
+
+/* Remaining styles unchanged */
+
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+#yesButton, #noButton {
+    flex-grow: 1;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 500;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    touch-action: auto; 
+}
+
+#noButton {
+    background-color: #dc3545;
+}
+
+#yesButton:hover, #noButton:hover {
+    background-color: #0056b3;
+}
+
+#noButton:hover {
+    background-color: #c82333;
+}
+
+#yesButton:focus, #noButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+#popup-card {
+    width: 500px;
+    height: 550px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+#popup-card img {
+    max-width: 100%; /* Makes the GIF responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    margin-bottom: 15px; /* Space between the GIF and the text */
+}
+
+#card5 {
+    /* background-image: url('https://media.tenor.com/IqWzE2vuKDcAAAAi/hot-coco.gif'); */
+    background-size: cover; /* Cover the card area, may crop the image */
+    background-position: center; /* Center the image within the card */
+    background-repeat: no-repeat; /* Prevent image repeat */
+}
+.card p {
+    font-family: 'Indie Flower', cursive; /* Handwritten-style font for a personal touch */
+    color: #D06C8A; /* Soft pink for warmth and affection */
+    font-size: 1.2rem; /* Slightly larger font for readability */
+    text-align: center; /* Center-align text for aesthetic balance */
+    margin: 10px 0; /* Maintain some spacing around text */
+}
+
+
+#popup-card p{
+    font-family: 'Indie Flower', cursive; /* Handwritten-style font for a personal touch */
+    color: #D06C8A; /* Soft pink for warmth and affection */
+    font-size: 1.5rem; /* Increased font size for readability */
+    text-align: center; /* Center-align text for aesthetic balance */
+    margin: 30px 0; /* Maintain some spacing around text */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px 20px; /* Adjust padding to your liking */
+   
+    font-family: 'Roboto', sans-serif; /* Optional: font styling */
+}
+
+footer a{
+    color: #fb4e73; /* Change to your preferred color */
+    text-decoration: none;
+}
+
+footer p{
+    color: #77ddfa; /* Change to your preferred color */
+    text-decoration: none;
+    font-weight: bold;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .card, #popup-card {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+        transform: none !important;
+    }
+
+    #cards-container {
+        flex-direction: column;
+    }
+
+    .button-container {
+        width: 80%;
+    }
+
+    #yesButton, #noButton {
+        margin: 5px;
+        flex-grow: 0;
+        width: 48%;
+    }
+
+    #popup-card {
+        width: 80%;
+        height: auto;
+    }
+}
+
